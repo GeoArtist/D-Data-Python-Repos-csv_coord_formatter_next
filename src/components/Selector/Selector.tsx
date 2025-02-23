@@ -12,7 +12,7 @@ type SelectorProps={
   placeholder: string;
   options: string[];
   value: string;
-  onValueChange: (value: any) => void;
+  onValueChange: (value:string) => void;
 }
 
 export function Selector({placeholder,value,options, onValueChange}:SelectorProps) {
