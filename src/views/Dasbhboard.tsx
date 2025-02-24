@@ -36,7 +36,6 @@ export default function Dashboard() {
           onValueChange={(value) => setSeparator(value)}
         />
       </div>
-      <h1>{filename}</h1>
       <Divider />
       {points.length > 0 && (
         <div >

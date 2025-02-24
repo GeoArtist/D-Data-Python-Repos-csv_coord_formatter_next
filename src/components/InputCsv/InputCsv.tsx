@@ -28,7 +28,6 @@ export function InputCsv() {
       }
       // Set filename
       setFilename(file.name)
-      debugger
     };
     reader.readAsText(file);
   };
