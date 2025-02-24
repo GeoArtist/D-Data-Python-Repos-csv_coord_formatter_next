@@ -12,6 +12,7 @@ import { Divider } from "@/components/Divider/Divider";
 
 export default function Dashboard() {
   const {
+    filename,
     decimalPlacesXY,
     setDecimalPlacesXY,
     decimalPlacesZ,
@@ -23,19 +24,19 @@ export default function Dashboard() {
 
   return (
     <div className="p-6 space-y-4 max-w-[1000px] mx-auto">
-      
+
       <div className="grid gap-4 mb-[50px]"  >
-      <h1 className="text-center">CSV Transformer</h1> 
-      <h2 className="text-center">[Nr X Y H] </h2> 
+        <h1 className="text-center">CSV Transformer</h1>
+        <h2 className="text-center">[Nr X Y H] </h2>
         <InputCsv />
         <Selector
-                placeholder="Separator"
-                options={[",", ";", "space"]}
-                value={separator}
-                onValueChange={(value) => setSeparator(value)}
-              />
+          placeholder="Separator"
+          options={[",", ";", "space"]}
+          value={separator}
+          onValueChange={(value) => setSeparator(value)}
+        />
       </div>
-      
+      <h1>{filename}</h1>
       <Divider />
       {points.length > 0 && (
         <div >

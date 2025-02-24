@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { separatorMap } from "@/constants/constants";
 
 export function InputCsv() {
-  const { separator, setPoints } = useDashboardContext();
+  const { separator, setPoints, setFilename } = useDashboardContext();
 
 
 
@@ -26,6 +26,9 @@ export function InputCsv() {
         }
         processCsv(e.target.result);
       }
+      // Set filename
+      setFilename(file.name)
+      debugger
     };
     reader.readAsText(file);
   };
@@ -61,5 +64,5 @@ export function InputCsv() {
     setPoints(filteredPoints);
   };
 
-  return <Input type="file" accept=".csv, .txt" onChange={handleFileUpload} className='max-w-[300px] mx-auto mb-[25px] bg-grey hover:bg-hover cursor-pointer border-theme2 border-[2px]'/>;
+  return <Input type="file" accept=".csv, .txt" onChange={handleFileUpload} className='max-w-[300px] mx-auto mb-[25px] bg-grey hover:bg-hover cursor-pointer border-theme2 border-[2px]' />;
 }

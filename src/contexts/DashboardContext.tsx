@@ -5,6 +5,8 @@ import { createContext, useContext,useState } from "react";
 
 
 interface DashboardContextType {
+    filename: string;
+    setFilename: React.Dispatch<React.SetStateAction<string>>;
     decimalPlacesXY: number;
     setDecimalPlacesXY: React.Dispatch<React.SetStateAction<number>>;
     decimalPlacesZ: number;
@@ -18,6 +20,7 @@ interface DashboardContextType {
 const DashboardContext = createContext<DashboardContextType | undefined>(undefined);
 
 export const DashboardProvider = ({ children }: { children: React.ReactNode }) => {
+    const [filename, setFilename] = useState<string>("");
     const [decimalPlacesXY, setDecimalPlacesXY] = useState<number>(2);
     const [decimalPlacesZ, setDecimalPlacesZ] = useState<number>(1);
     const [separator, setSeparator] = useState<string>("space");
@@ -26,6 +29,8 @@ export const DashboardProvider = ({ children }: { children: React.ReactNode }) =
     return (
         <DashboardContext.Provider
             value={{
+                filename,
+                setFilename,
                 decimalPlacesXY,
                 setDecimalPlacesXY,
                 decimalPlacesZ,
