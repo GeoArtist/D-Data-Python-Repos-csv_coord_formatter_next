@@ -61,5 +61,5 @@ export function InputCsv() {
     setPoints(filteredPoints);
   };
 
-  return <Input type="file" accept=".csv, .txt" onChange={handleFileUpload} className='max-w-[300px] mx-auto mt-[100px] bg-grey hover:bg-hover cursor-pointer border-theme2 border-[2px]'/>;
+  return <Input type="file" accept=".csv, .txt" onChange={handleFileUpload} className='max-w-[300px] mx-auto mt-[100px] mb-[25px] bg-grey hover:bg-hover cursor-pointer border-theme2 border-[2px]'/>;
 }
