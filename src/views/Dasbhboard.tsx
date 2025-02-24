@@ -12,7 +12,6 @@ import { Divider } from "@/components/Divider/Divider";
 
 export default function Dashboard() {
   const {
-    filename,
     decimalPlacesXY,
     setDecimalPlacesXY,
     decimalPlacesZ,
