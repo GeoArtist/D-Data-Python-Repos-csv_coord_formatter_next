@@ -5,7 +5,26 @@
 
 
 @layer base {
+  h1 {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
+      color: var(--clr-theme-2);
+      filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.15));
+  }
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--clr-theme-2);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.6);
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.15));
+}
   :root {
+    
 
     --background: 0 0% 100%;
 

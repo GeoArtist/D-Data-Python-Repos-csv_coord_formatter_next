@@ -23,7 +23,10 @@ export default function Dashboard() {
 
   return (
     <div className="p-6 space-y-4 max-w-[1000px] mx-auto">
+      
       <div className="grid gap-4 mb-[50px]"  >
+      <h1 className="text-center">CSV Transformer</h1> 
+      <h2 className="text-center">[Nr X Y H] </h2> 
         <InputCsv />
         <Selector
                 placeholder="Separator"
