@@ -36,17 +36,17 @@ export function OperationalButtons() {
     };
 
     return(
-         <div className="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] max-w-[800px] mx-auto p-2 my-[20px]">
+         <div className="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] max-w-[800px] mx-auto">
         <Button
           variant="outline"
-          className="p-2 space-y-4 w-[200px] mx-auto "
+          className="p-2 space-y-4 w-[200px] mx-auto bg-grey hover:bg-hover cursor-pointer border-theme2 border-[2px]"
           onClick={swapCoordinates}
         >
           Swap X and Y
         </Button>
         <Button
           variant="outline"
-          className="p-2 space-y-4 w-[200px] mx-auto"
+          className="p-2 space-y-4 w-[200px] mx-auto bg-grey hover:bg-hover cursor-pointer border-theme2 border-[2px]"
           onClick={downloadCsv}
         >
           Download CSV

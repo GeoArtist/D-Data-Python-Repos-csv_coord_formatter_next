@@ -23,17 +23,21 @@ export default function Dashboard() {
 
   return (
     <div className="p-6 space-y-4 max-w-[1000px] mx-auto">
-      <InputCsv />
+      <div className="grid gap-4 mb-[50px]"  >
+        <InputCsv />
+        <Selector
+                placeholder="Separator"
+                options={[",", ";", "space"]}
+                value={separator}
+                onValueChange={(value) => setSeparator(value)}
+              />
+      </div>
+      
       <Divider />
       {points.length > 0 && (
         <div >
-          <div className="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] justify-items-center gap-4 mx-auto max-w-[800px] ">
-            <Selector
-              placeholder="Separator"
-              options={[",", ";", "space"]}
-              value={separator}
-              onValueChange={(value) => setSeparator(value)}
-            />
+          <div className="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] max-w-[600px] gap-4 mx-auto p-2 my-[20px]">
+
             <Selector
               placeholder="Decimal Places X/Y"
               options={["0", "1", "2", "3"]}

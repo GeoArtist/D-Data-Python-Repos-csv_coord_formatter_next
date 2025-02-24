@@ -33,11 +33,11 @@ export function InputCsv() {
   const validateCsv = (data: string) => {
     const lines = data.split("\n");
     if (lines.length < 1) {
-      throw new Error("Invalid lenght of file");
+      throw new Error("Niepoprawna długość pliku");
     }
 
     if (lines[0].split(separatorMap.get(separator)!).length < 4) {
-      throw new Error("Invalid separator");
+      throw new Error("Niepoprawny separator lub struktura pliku");
     }
   };
 
@@ -61,5 +61,5 @@ export function InputCsv() {
     setPoints(filteredPoints);
   };
 
-  return <Input type="file" accept=".csv, .txt" onChange={handleFileUpload} className='max-w-[300px] mx-auto mt-[100px] mb-[50px]'/>;
+  return <Input type="file" accept=".csv, .txt" onChange={handleFileUpload} className='max-w-[300px] mx-auto mt-[100px] bg-grey hover:bg-hover cursor-pointer border-theme2 border-[2px]'/>;
 }
